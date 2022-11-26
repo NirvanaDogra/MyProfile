@@ -1,9 +1,11 @@
 package com.example.mapsmodule.viewmodel
 
 import android.annotation.SuppressLint
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.mapsmodule.BuildConfig
 import com.example.mapsmodule.usecase.LocateMeUseCase
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -28,7 +30,7 @@ class LocateMeViewModel : ViewModel() {
         usecase.makeDirectionCall(
             origin = "40.102378562370504, -88.23122260894557",
             destination = "40.09192319438652, -88.24832820269427",
-            "AIzaSyCU_vgYhjM9m0veRMJer3_6imYibBv0UTM"
+            key = BuildConfig.GOOGLE_MAPS_API_KEY
         )
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())

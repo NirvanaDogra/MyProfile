@@ -12,6 +12,7 @@ android {
     }
     defaultConfig {
         manifestPlaceholders = [GOOGLE_MAPS_API_KEY: localProperties['GOOGLE_MAPS_API_KEY']]
+        buildConfigField "String", "GOOGLE_MAPS_API_KEY", localProperties['GOOGLE_MAPS_API_KEY']
         minSdk 21
         targetSdk 32
         versionCode 1
