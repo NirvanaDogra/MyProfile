@@ -56,6 +56,10 @@ class ShowProfileViewModel : ViewModel() {
             })
     }
 
+    fun downNavigationClicked() {
+        mutableViewEvent.value = ShowProfileEvent.DownNavigationButtonClicked
+    }
+
     private fun getPostList(postDataModel: PostDataModel): MutableList<BaseScreenModel> {
         val postList = mutableListOf<BaseScreenModel>()
         for (postData in postDataModel.whatsNewPostList) {

@@ -7,5 +7,6 @@ sealed class ShowProfileEvent {
     object ShowErrorDialog : ShowProfileEvent()
     object FindMeClicked : ShowProfileEvent()
     data class OnSuccess(val data: MutableList<BaseScreenModel>) : ShowProfileEvent()
+    object DownNavigationButtonClicked : ShowProfileEvent()
 
 }

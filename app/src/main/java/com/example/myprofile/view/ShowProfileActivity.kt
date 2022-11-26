@@ -51,6 +51,14 @@ class ShowProfileActivity : AppCompatActivity() {
             is ShowProfileEvent.OnNetworkError -> handleNetworkError()
             is ShowProfileEvent.ShowErrorDialog -> showErrorDialog()
             is ShowProfileEvent.FindMeClicked -> navigateToFindMePage()
+            is ShowProfileEvent.DownNavigationButtonClicked -> showNextItem()
+        }
+    }
+
+    private fun showNextItem() {
+        with(binding.recyclerShowProfilePostsHolder) {
+            val pos = (layoutManager as LinearLayoutManager).findFirstVisibleItemPosition();
+            smoothScrollToPosition(pos + 1)
         }
     }
 
@@ -81,5 +89,6 @@ class ShowProfileActivity : AppCompatActivity() {
             val helper: PagerSnapHelper = PagerSnapHelper()
             helper.attachToRecyclerView(this)
         }
+        binding.viewmodel = viewModel
     }
 }
