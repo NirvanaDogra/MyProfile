@@ -92,3 +92,6 @@ app/.DS_Store
 *.jar
 *.bat
 gradlew
+.idea/misc.xml
+.idea/.name
+.idea/compiler.xml
