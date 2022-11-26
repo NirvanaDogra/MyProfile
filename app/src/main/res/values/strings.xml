@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Profile</string>
+    <string name="profile_home_hi">Hi,</string>
+    <string name="profile_home_my_name">I am Nirvana</string>
+</resources>

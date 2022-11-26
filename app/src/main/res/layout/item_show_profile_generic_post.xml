@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="postData"
+            type="com.example.myprofile.viewmodel.GenericPostModel" />
+
+        <variable
+            name="textColor"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_show_profile_general_post"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:background="@drawable/background_yellow_radius_8">
+
+        <ImageView
+            android:id="@+id/imageview_show_profile_general_post_poster_avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="16dp"
+            app:avatar_image="@{(@drawable/my_picture)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_show_profile_general_post_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="@{postData.heading}"
+            android:textColor="@{textColor}"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageview_show_profile_general_post_poster_avatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_show_profile_general_post_subheading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:text="@{postData.subHeading}"
+            android:textColor="@{textColor}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageview_show_profile_general_post_poster_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/textview_show_profile_general_post_header" />
+
+        <ImageView
+            android:id="@+id/imageview_show_profile_general_post_center_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_show_profile_general_post_center_post_description"
+            app:layout_constraintEnd_toEndOf="@id/textview_show_profile_general_post_subheading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageview_show_profile_general_post_poster_avatar" />
+
+        <TextView
+            android:id="@+id/textview_show_profile_general_post_center_post_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:paddingStart="16dp"
+            android:paddingBottom="32dp"
+            android:text="@{postData.postDescription}"
+            android:textColor="@{textColor}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

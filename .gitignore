@@ -83,3 +83,12 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+network/src/.DS_Store
+network/.DS_Store
+mapsmodule/src/.DS_Store
+mapsmodule/.DS_Store
+app/.DS_Store
+.DS_Store
+*.jar
+*.bat
+gradlew
