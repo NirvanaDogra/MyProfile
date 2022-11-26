@@ -13,5 +13,5 @@
 
 <br></br>
 <p align="center">
-<img src="https://github.com/NirvanaDogra/MyProfileApplication/blob/63e1db46b84d14ece64d25566f88cb46d0bcd54f/README%20assets/Figma.gif"  />
+<img src="https://github.com/NirvanaDogra/MyProfile/blob/0caa28b8283217fee260cad12ac69dd410ab6ab4/README%20assets/Figma.gif"  />
 </p>
