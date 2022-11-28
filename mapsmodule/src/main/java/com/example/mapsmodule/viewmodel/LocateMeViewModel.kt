@@ -39,6 +39,7 @@ class LocateMeViewModel : ViewModel() {
                     mutableViewState.value?.copy(isError = false, isLoading = false)
                 mutableViewEvent.value = LocateMeEvent.PathRetrievedSuccessful(it)
             }, {
+                Log.d("Error", it.toString())
                 mutableViewState.value =
                     mutableViewState.value?.copy(isError = true, isLoading = false)
             })

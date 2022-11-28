@@ -58,7 +58,7 @@ class LocateMeActivity : FragmentActivity(), OnMapReadyCallback {
         val location = LatLng(lat, lng)
         googleMap.apply {
             addPolyline(polyline)
-            moveCamera(CameraUpdateFactory.newLatLngZoom(location, 16.0f))
+            moveCamera(CameraUpdateFactory.newLatLngZoom(location, 14.0f))
         }
     }
 
@@ -81,7 +81,7 @@ class LocateMeActivity : FragmentActivity(), OnMapReadyCallback {
 
     private fun initializeView() {
         fragment =
-            supportFragmentManager.findFragmentById(R.id.map_fragment_locate_me) as SupportMapFragment
+            supportFragmentManager.findFragmentById(R.id.map_fragment) as SupportMapFragment
         fragment.getMapAsync(this)
         viewModel = ViewModelProvider(this)[LocateMeViewModel::class.java]
     }
