@@ -19,7 +19,8 @@
         <activity
             android:name=".view.LocateMeActivity"
             android:exported="false"
-            android:label="Locate Me"/>
+            android:label="Locate Me"
+            android:theme="@style/Theme.MyProfile"/>
     </application>
 
 </manifest>

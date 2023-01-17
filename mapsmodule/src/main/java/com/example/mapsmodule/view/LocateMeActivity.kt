@@ -59,6 +59,7 @@ class LocateMeActivity : FragmentActivity(), OnMapReadyCallback {
         googleMap.apply {
             addPolyline(polyline)
             moveCamera(CameraUpdateFactory.newLatLngZoom(location, 14.0f))
+            mapType = GoogleMap.MAP_TYPE_HYBRID;
         }
     }
 

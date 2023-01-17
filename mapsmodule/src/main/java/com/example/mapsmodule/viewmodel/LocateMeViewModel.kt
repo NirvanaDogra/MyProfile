@@ -28,8 +28,8 @@ class LocateMeViewModel : ViewModel() {
     @SuppressLint("CheckResult")
     fun getDirectionData() {
         usecase.makeDirectionCall(
-            origin = "40.102378562370504, -88.23122260894557",
-            destination = "40.09192319438652, -88.24832820269427",
+            origin = "40.09146984173454, -88.23989331574882",
+            destination = "40.109988878764284, -88.22825625816574",
             key = BuildConfig.GOOGLE_MAPS_API_KEY
         )
             .subscribeOn(Schedulers.io())

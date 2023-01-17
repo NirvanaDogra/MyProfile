@@ -90,8 +90,6 @@ mapsmodule/.DS_Store
 app/.DS_Store
 .DS_Store
 *.jar
-*.bat
-gradlew
 .idea/misc.xml
 .idea/.name
 .idea/compiler.xml
